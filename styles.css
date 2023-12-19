@@ -1,10 +1,76 @@
 body {
-   background: white;
-   text-align:  center;
 }
 
-#tetris-canvas {
-   background: white;
-   margin-left:  10px;
-   margin-right: 10px;
+.main-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.container {
+   display: flex;
+}
+
+h1 {
+   font-family: 'Montserrat', sans-serif;
+   color: rgb(20, 132, 132);
+   font-size: 50px;
+}
+
+.grid {
+   width: 350px;
+   height: 700px;
+   display: flex;
+   flex-wrap: wrap;
+   background-color: rgb(244, 235, 252);
+}
+
+.grid div {
+   height: 35px;
+   width: 35px;
+}
+
+.tetrimino {
+   background-color: rgb(174, 229, 229);
+   box-sizing: border-box;
+   border: 1px solid aliceblue;
+   border-radius: 5px;
+}
+
+.right-column{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: aliceblue;
+   padding: 30px;
+}
+
+#start-button {
+   margin: 20px;
+}
+
+.next-shape-grid {
+   width: 80px;
+   height: 80px;
+   display: flex;
+   flex-wrap: wrap;
+   background-color: rgb(233, 208, 255);
+   margin-bottom: 40px;
+}
+
+.next-shape-grid div {
+   height: 20px;
+   width: 20px;
+}
+
+#score {
+   
+}
+
+.controls-list {
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(189, 227, 243);
+   margin-top: 40px;
+   padding: 10px;
 }
