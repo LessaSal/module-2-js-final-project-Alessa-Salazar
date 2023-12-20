@@ -25,14 +25,14 @@
     [gridWidth, gridWidth + 1, gridWidth + 2, gridWidth * 2]
   ]
 
-  const zTetrimino = [
+  const sTetrimino = [
     [gridWidth + 1, gridWidth + 2, gridWidth * 2, gridWidth * 2 + 1],
     [0, gridWidth, gridWidth + 1, gridWidth * 2 + 1], 
     [gridWidth + 1, gridWidth + 2, gridWidth * 2, gridWidth * 2 + 1],
     [0, gridWidth, gridWidth + 1, gridWidth * 2 + 1]
   ]
 
-  const sTetrimino = [
+  const zTetrimino = [
     [gridWidth, gridWidth + 1, gridWidth * 2 + 1, gridWidth * 2 + 2],
     [1, gridWidth, gridWidth + 1, gridWidth * 2], 
     [gridWidth, gridWidth + 1, gridWidth * 2 + 1, gridWidth * 2 + 2],
@@ -118,6 +118,7 @@
       moveTetriminoDown();
     }
   }
+
   document.addEventListener("keydown", controls);
  
   // this function moves the tetrimino down
@@ -128,7 +129,7 @@
     freeze();
   }
 
-  // this function 
+  // freeze function
   function freeze() {
     if(current.some(index => gridSquares[currentPosition + index + gridWidth].classList.contains("taken"))) {
       current.forEach(index => gridSquares[currentPosition + index].classList.add("taken"));
@@ -178,7 +179,7 @@
     draw();
   }
 
-  // fix for the tetrominos moving past the limits occasionally
+  // fix for the tetriminos moving past the limits occasionally
   function isAtRight() {
     return current.some(index => (currentPosition + index + 1) % gridWidth === 0);
   }
@@ -226,8 +227,8 @@
   // an array of the first rotation of each tetrimino
   const nextTetrimino = [
     [0, 1, displayWidth + 1, displayWidth * 2 + 1], // lTetrimino
-    [displayWidth + 1, displayWidth + 2, displayWidth * 2, displayWidth * 2 + 1], // zTetrimino
-    [displayWidth, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2], // sTetrimino
+    [displayWidth + 1, displayWidth + 2, displayWidth * 2, displayWidth * 2 + 1], // sTetrimino
+    [displayWidth, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2], // zTetrimino
     [1, displayWidth, displayWidth + 1, displayWidth + 2], // tTetrimino
     [0, 1, displayWidth, displayWidth + 1], // oTetrimino
     [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1], // iTetrimino
