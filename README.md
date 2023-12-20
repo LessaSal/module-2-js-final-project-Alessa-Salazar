@@ -1,4 +1,4 @@
-This is my final project for mod 2. I made a simple tetris game. It has 9 shapes, a score and level counter, a controls list, and will display what shape is next.
+This is my final project for mod 2. I made a simple tetris game. It has 9 shapes, a score, and level counter, a controls list, and will display what shape is next.
 
 
 I followed this tutorial to help me - "The Alternative Guide to Building Tetris with JavaScript - Video for the Ultra Begginer" by Code With Ania Kubow - https://www.youtube.com/watch?v=w1JJfK09ujQ&t=2774s
